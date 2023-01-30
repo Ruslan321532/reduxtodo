@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import { AddTodo } from './components/AddTodo';
+import { TodoLists } from './components/TodoList';
 
-function App() {
+const todostyle = {
+  textAlign: "center",
+  textTransform: "uppercase",
+  fontWeight: "400",
+  lineHeight: "20px",
+  color:"#D1B59A",
+}
+
+const App = () => {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container1">
+      <h2 style={todostyle}>TodoList</h2>
+      <AddTodo/>
+      <TodoLists/>
     </div>
   );
 }
